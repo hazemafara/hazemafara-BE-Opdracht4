@@ -199,10 +199,10 @@ class InstructeurModel
 
     function verwijderVoertuig($voertuigId)
     {
-        // $sql = "delete from voertuig where id = ?";
-        // $this->db->query($sql);
-        // $this->db->bind(1, $voertuigId);
-        // $this->db->single();
+        $sql = "delete from voertuig where id = ?";
+        $this->db->query($sql);
+        $this->db->bind(1, $voertuigId);
+        $this->db->single();
     }
 
     public function getAlleVoertuigen()
@@ -232,21 +232,21 @@ class InstructeurModel
                 
                 ORDER BY    VOER.Bouwjaar DESC";
 
-        // $this->db->query($sql);
-        // return $this->db->resultSet();
+        $this->db->query($sql);
+        return $this->db->resultSet();
     }
 
     function maakActief($instructeurId)
     {
-        // $sql = "update Instructeur set IsActief = 1 where Id = ?";
-        // $this->db->query($sql);
-        // $this->db->bind(1, $instructeurId);
-        // $this->db->single();
+        $sql = "update Instructeur set IsActief = 1 where Id = ?";
+        $this->db->query($sql);
+        $this->db->bind(1, $instructeurId);
+        $this->db->single();
 
-        // $sql = "update VoertuigInstructeur set IsActief = 1 where InstructeurId = ?";
-        // $this->db->query($sql);
-        // $this->db->bind(1, $instructeurId);
-        // $this->db->single();
+        $sql = "update VoertuigInstructeur set IsActief = 1 where InstructeurId = ?";
+        $this->db->query($sql);
+        $this->db->bind(1, $instructeurId);
+        $this->db->single();
     }
 
     function maakInactief($instructeurId)
