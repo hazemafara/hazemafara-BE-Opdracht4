@@ -243,10 +243,10 @@ class InstructeurModel
         $this->db->bind(1, $instructeurId);
         $this->db->single();
 
-        $sql = "update VoertuigInstructeur set IsActief = 1 where InstructeurId = ?";
-        $this->db->query($sql);
-        $this->db->bind(1, $instructeurId);
-        $this->db->single();
+        // $sql = "update VoertuigInstructeur set IsActief = 1 where InstructeurId = ?";
+        // $this->db->query($sql);
+        // $this->db->bind(1, $instructeurId);
+        // $this->db->single();
     }
 
     function maakInactief($instructeurId)
