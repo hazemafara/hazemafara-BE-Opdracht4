@@ -89,10 +89,7 @@ class Instructeur extends BaseController
                             </td>
                           </tr>";
         } else {
-            /**
-             * Bouw de rows op in een foreach-loop en stop deze in de variabele
-             * $tabelRows
-             */
+
             foreach ($result as $voertuig) {
 
                 /**
@@ -176,22 +173,17 @@ class Instructeur extends BaseController
 
         $instructeurInfo = $this->instructeurModel->getInstructeurById($Id);
 
-        // var_dump($instructeurInfo);
         $naam = $instructeurInfo->Voornaam . " " . $instructeurInfo->Tussenvoegsel . " " . $instructeurInfo->Achternaam;
         $datumInDienst = $instructeurInfo->DatumInDienst;
         $aantalSterren = $instructeurInfo->AantalSterren;
 
-        /**
-         * We laten de model alle gegevens ophalen uit de database
-         */
+     
         $result = $this->instructeurModel->getBeschikbareVoertuigen($Id);
 
 
         $tableRows = "";
         if (empty($result)) {
-            /**
-             * Als er geen toegewezen voertuigen zijn komt de onderstaande tekst in de tabel
-             */
+           
             $tableRows = "<tr>
                             <td colspan='9'>
                                 Er zijn op dit moment geen beschikbare voertuigen
@@ -202,15 +194,10 @@ class Instructeur extends BaseController
                           </script>
                           ";
         } else {
-            /**
-             * Bouw de rows op in een foreach-loop en stop deze in de variabele
-             * $tabelRows
-             */
+       
             foreach ($result as $voertuig) {
 
-                /**
-                 * Zet de datum in het juiste format
-                 */
+             
                 $date_formatted = date_format(date_create($voertuig->Bouwjaar), 'd-m-Y');
 
                 $tableRows .= "<tr>
@@ -277,9 +264,7 @@ class Instructeur extends BaseController
 
         $tableRows = "";
         if (empty($result)) {
-            /**
-             * Als er geen toegewezen voertuigen zijn komt de onderstaande tekst in de tabel
-             */
+           
             $tableRows = "<tr>
                             <td colspan='9'>
                                 Er zijn op dit moment geen voertuigen
@@ -287,10 +272,7 @@ class Instructeur extends BaseController
                           </tr>
                           ";
         } else {
-            /**
-             * Bouw de rows op in een foreach-loop en stop deze in de variabele
-             * $tabelRows
-             */
+          
             foreach ($result as $voertuig) {
 
                 /**
@@ -333,9 +315,7 @@ class Instructeur extends BaseController
 
         $tableRows = "";
         if (empty($result)) {
-            /**
-             * Als er geen toegewezen voertuigen zijn komt de onderstaande tekst in de tabel
-             */
+            
             $tableRows = "<tr>
                             <td colspan='9'>
                                 Er zijn op dit moment geen voertuigen
