@@ -232,8 +232,8 @@ class InstructeurModel
                 
                 ORDER BY    VOER.Bouwjaar DESC";
 
-        $this->db->query($sql);
-        return $this->db->resultSet();
+        // $this->db->query($sql);
+        // return $this->db->resultSet();
     }
 
     function maakActief($instructeurId)
