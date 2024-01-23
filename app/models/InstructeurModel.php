@@ -263,15 +263,5 @@ class InstructeurModel
     }
 
     function deleteInstructeur($instructeurId)
-    {
-        $sql = "delete from VoertuigInstructeur where InstructeurId = ?";
-        $this->db->query($sql);
-        $this->db->bind(1, $instructeurId);
-        $this->db->single();
 
-        $sql = "delete from Instructeur where Id = ?";
-        $this->db->query($sql);
-        $this->db->bind(1, $instructeurId);
-        $this->db->single();
-    }
 }
