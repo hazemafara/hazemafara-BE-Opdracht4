@@ -199,10 +199,10 @@ class InstructeurModel
 
     function verwijderVoertuig($voertuigId)
     {
-        $sql = "delete from voertuig where id = ?";
-        $this->db->query($sql);
-        $this->db->bind(1, $voertuigId);
-        $this->db->single();
+        // $sql = "delete from voertuig where id = ?";
+        // $this->db->query($sql);
+        // $this->db->bind(1, $voertuigId);
+        // $this->db->single();
     }
 
     public function getAlleVoertuigen()
