@@ -238,10 +238,10 @@ class InstructeurModel
 
     function maakActief($instructeurId)
     {
-        $sql = "update Instructeur set IsActief = 1 where Id = ?";
-        $this->db->query($sql);
-        $this->db->bind(1, $instructeurId);
-        $this->db->single();
+        // $sql = "update Instructeur set IsActief = 1 where Id = ?";
+        // $this->db->query($sql);
+        // $this->db->bind(1, $instructeurId);
+        // $this->db->single();
 
         // $sql = "update VoertuigInstructeur set IsActief = 1 where InstructeurId = ?";
         // $this->db->query($sql);
